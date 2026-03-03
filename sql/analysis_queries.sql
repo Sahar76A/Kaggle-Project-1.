@@ -17,7 +17,7 @@ SELECT * FROM customer_data LIMIT 10;
 SELECT COUNT(*) AS sales_rows FROM sales_data;
 SELECT COUNT(*) AS customer_rows FROM customer_data;
 
--- Null checks (edit columns if needed)
+-- Null checks 
 SELECT
   SUM(CASE WHEN customer_id IS NULL THEN 1 ELSE 0 END) AS null_customer_id,
   SUM(CASE WHEN total_price IS NULL THEN 1 ELSE 0 END) AS null_total_price,
@@ -38,8 +38,6 @@ HAVING COUNT(*) > 1;
 
 ---------------------------------------------------------------
 -- 1) SINGLE SOURCE OF TRUTH (UNIFIED VIEW)
--- If your SQL engine supports CREATE VIEW, keep this.
--- Otherwise just use the CTE in later queries.
 ---------------------------------------------------------------
 
 CREATE OR REPLACE VIEW unified_sales_customer AS

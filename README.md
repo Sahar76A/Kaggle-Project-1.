@@ -1,4 +1,5 @@
 📊 Customer & Sales Data Analysis | SQL Project
+
 📌 Project Overview
 
 This project analyzes transactional sales and customer data to generate structured business insights using SQL.
